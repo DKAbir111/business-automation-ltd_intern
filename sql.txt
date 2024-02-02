@@ -1,0 +1,15 @@
+CREATE TABLE ElectricCar (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    model VARCHAR(255) NOT NULL,
+    year INT NOT NULL,
+    battery_capacity FLOAT NOT NULL
+);
+
+CREATE TABLE GasCar (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    model VARCHAR(255) NOT NULL,
+    year INT NOT NULL,
+    fuel_efficiency FLOAT NOT NULL
+);

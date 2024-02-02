@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Inventory System</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="addCarForm">
+        <form id="carForm" action="processForm.php" method="post">
+            <label for="carType">Car Type (Electric/Gas):</label>
+            <select id="carType" name="car_type">
+                <option value="Electric">Electric</option>
+                <option value="Gas">Gas</option>
+            </select>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" required>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" required>
+
+            <div id="electricFields" style="display: none;">
+                <label for="batteryCapacity">Battery Capacity (kWh):</label>
+                <input type="number" id="batteryCapacity" name="battery_capacity">
+            </div>
+
+            <div id="gasFields" style="display: none;">
+                <label for="fuelEfficiency">Fuel Efficiency (MPG):</label>
+                <input type="number" id="fuelEfficiency" name="fuel_efficiency">
+            </div>
+
+            <button type="submit">Add Car</button>
+        </form>
+    </div>
+
+    <div id="carList">
+        <table id="carTable" class="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Battery Capacity (kWh)</th>
+                    <th>Fuel Efficiency (MPG)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Car data will be dynamically loaded here -->
+            </tbody>
+        </table>
+    </div>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>
